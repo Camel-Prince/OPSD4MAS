@@ -1,0 +1,44 @@
+{
+  "prepared_on": "2026-11-10",
+  "status": "local_checks_pass_target_gpu_unverified",
+  "checks": {
+    "release_unittest": {
+      "tests": 14,
+      "status": "pass"
+    },
+    "static_public_package": "pass",
+    "paper_table": {
+      "cells": 108,
+      "status": "exact_match_to_manuscript_displayed_values"
+    },
+    "training_data": {
+      "unique_rows": 17917,
+      "status": "pass"
+    },
+    "benchmark_rows": {
+      "AMC23": 83,
+      "AIME24": 30,
+      "AIME25": 30,
+      "MATH-500": 500,
+      "Olympiad-Bench": 675,
+      "Minerva": 272
+    },
+    "prepared_data_manifest": "pass",
+    "source_and_shell_syntax": "pass",
+    "figure_visual_review": "pass"
+  },
+  "not_run": [
+    "complete import-based pytest suite",
+    "Linux CUDA dependency installation",
+    "four-GPU kernels",
+    "real API calls",
+    "FW4 model training",
+    "checkpoint weight loading",
+    "full benchmark generation"
+  ],
+  "publication_gaps": [
+    "Exact six-benchmark authorized public download locations not established",
+    "Final author/arXiv/public repository metadata not assigned"
+  ],
+  "test_notes": "Two numerical checks execute unchanged source function bodies with CPU PyTorch in isolation; not a full framework import test. Extra test-dependency download timed out."
+}

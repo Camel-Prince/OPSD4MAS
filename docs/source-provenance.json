@@ -1,0 +1,1260 @@
+{
+  "release": "OPSD4MAS FW4 public release candidate",
+  "source_commit": "eb8d9f7e75b198c7f91aedef3422685bcd021ffc",
+  "source_tag": "run/20261010-s1-fw4-step70-math3-r1",
+  "historical_run": "fc4-loop3-rv2-apihealth-from20-f12t4-t120r90c4-w60-s10",
+  "scope": "FW4 training and six-benchmark evaluation; no baseline training or private history",
+  "qualification": "Source is a preserved FW4 evaluation snapshot. Original training was resumed from step 20; its full initial environment and checkpoint-to-main-table mapping have not been recovered. Public fresh training is not a bitwise replay.",
+  "source_files": [
+    {
+      "path": "verl/__init__.py",
+      "source_sha256": "bab17fc25ca1b319e55f34200c677e26eb0dd9287a30d8ccad753dd3a685fffe",
+      "release_sha256": "bab17fc25ca1b319e55f34200c677e26eb0dd9287a30d8ccad753dd3a685fffe"
+    },
+    {
+      "path": "verl/models/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/models/llama/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/models/llama/megatron/__init__.py",
+      "source_sha256": "882e9d87f97eba0d0f67cacb2851e709c1771043e06c42880ccb11170d9914bd",
+      "release_sha256": "882e9d87f97eba0d0f67cacb2851e709c1771043e06c42880ccb11170d9914bd"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/llama_loader.py",
+      "source_sha256": "0b69218eef506e7b3bf8e8ac7ef7854c24e430f88bb9a60c049ef86447e5a4ff",
+      "release_sha256": "0b69218eef506e7b3bf8e8ac7ef7854c24e430f88bb9a60c049ef86447e5a4ff"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/llama_loader_depracated.py",
+      "source_sha256": "3bf740868cf4940d1767b8a07ed880a4c9fbbee78516b74579c3da114b2841f5",
+      "release_sha256": "3bf740868cf4940d1767b8a07ed880a4c9fbbee78516b74579c3da114b2841f5"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/llama_saver.py",
+      "source_sha256": "5a72bb2e822480717011555e7a92ef87f748733cc25f3b0069a6cc29528164b5",
+      "release_sha256": "5a72bb2e822480717011555e7a92ef87f748733cc25f3b0069a6cc29528164b5"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/__init__.py",
+      "source_sha256": "8fead5bd20800eaa0af7ef2b569cc621625e10dccd04a122bbced6fcc64b2f28",
+      "release_sha256": "8fead5bd20800eaa0af7ef2b569cc621625e10dccd04a122bbced6fcc64b2f28"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_attention.py",
+      "source_sha256": "ed63d236c9a9de0a064ffe822ce4990d399f70e3264b210bce62dd7894e5fce9",
+      "release_sha256": "ed63d236c9a9de0a064ffe822ce4990d399f70e3264b210bce62dd7894e5fce9"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_decoder.py",
+      "source_sha256": "cf46d344bd05544df7aedc17148c10539ba346899b36bc04ccae7a9fdd19a078",
+      "release_sha256": "cf46d344bd05544df7aedc17148c10539ba346899b36bc04ccae7a9fdd19a078"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_linear.py",
+      "source_sha256": "cc74ba5c9c3dc6e7e7051dc3d6c1954dcdb204dd9a1e551e7cf91c017fa649d2",
+      "release_sha256": "cc74ba5c9c3dc6e7e7051dc3d6c1954dcdb204dd9a1e551e7cf91c017fa649d2"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_mlp.py",
+      "source_sha256": "d8cd610347584db7f6557c4324bce63a750af0a783168ba4d41e3f50af85af67",
+      "release_sha256": "d8cd610347584db7f6557c4324bce63a750af0a783168ba4d41e3f50af85af67"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_rmsnorm.py",
+      "source_sha256": "93f929f88639f8b8ab56f2a67e21dd94f4fac64ccead78de443c770728472ef5",
+      "release_sha256": "93f929f88639f8b8ab56f2a67e21dd94f4fac64ccead78de443c770728472ef5"
+    },
+    {
+      "path": "verl/models/llama/megatron/modeling_llama_megatron.py",
+      "source_sha256": "379c2363e24175077c33e96313600cf11a7b0cbcef5948af47b5cd8d258834b6",
+      "release_sha256": "379c2363e24175077c33e96313600cf11a7b0cbcef5948af47b5cd8d258834b6"
+    },
+    {
+      "path": "verl/models/mcore/__init__.py",
+      "source_sha256": "ffbc6849ac5c7288f466e82ba8934c45003d743f85b923843847709b2224b079",
+      "release_sha256": "ffbc6849ac5c7288f466e82ba8934c45003d743f85b923843847709b2224b079"
+    },
+    {
+      "path": "verl/models/mcore/config_converter.py",
+      "source_sha256": "5bb033cea2bee5cf0515691e3549cfea06ff0efbf909619ecb882f8f4869136a",
+      "release_sha256": "5bb033cea2bee5cf0515691e3549cfea06ff0efbf909619ecb882f8f4869136a"
+    },
+    {
+      "path": "verl/models/mcore/loader.py",
+      "source_sha256": "196e11b3bb1d4871fee8eae85788fbbe256ce6159dd904f32a864c549ac786f0",
+      "release_sha256": "196e11b3bb1d4871fee8eae85788fbbe256ce6159dd904f32a864c549ac786f0"
+    },
+    {
+      "path": "verl/models/mcore/model_forward.py",
+      "source_sha256": "ed9daa678c7a929d6a0e5b94d32b001fadb21fbdf402c2c15d84501229f9596e",
+      "release_sha256": "ed9daa678c7a929d6a0e5b94d32b001fadb21fbdf402c2c15d84501229f9596e"
+    },
+    {
+      "path": "verl/models/mcore/model_initializer.py",
+      "source_sha256": "2d86cc72f3ae4c58de65aeffbba515c86f479e76bc2ed207a970bba4cd3406c1",
+      "release_sha256": "2d86cc72f3ae4c58de65aeffbba515c86f479e76bc2ed207a970bba4cd3406c1"
+    },
+    {
+      "path": "verl/models/mcore/patch_v012.py",
+      "source_sha256": "05cb2698ebe293d047792afa7d9f7b2b226a2f6795e571e10402c74b4eeb034a",
+      "release_sha256": "05cb2698ebe293d047792afa7d9f7b2b226a2f6795e571e10402c74b4eeb034a"
+    },
+    {
+      "path": "verl/models/mcore/registry.py",
+      "source_sha256": "82f9128e0a49e593ae9ceb758c565b7a676ad4fff18a8bec5bdd10ea46a81b88",
+      "release_sha256": "82f9128e0a49e593ae9ceb758c565b7a676ad4fff18a8bec5bdd10ea46a81b88"
+    },
+    {
+      "path": "verl/models/mcore/saver.py",
+      "source_sha256": "c196fb007d6260b9405891b802353ed7ffe922c93ecfa7ec6738300b477656de",
+      "release_sha256": "c196fb007d6260b9405891b802353ed7ffe922c93ecfa7ec6738300b477656de"
+    },
+    {
+      "path": "verl/models/mcore/util.py",
+      "source_sha256": "be583ccab0b08766ad747320d3b1847839c3790a08e16e9055168e6ab34012a3",
+      "release_sha256": "be583ccab0b08766ad747320d3b1847839c3790a08e16e9055168e6ab34012a3"
+    },
+    {
+      "path": "verl/models/mcore/weight_converter.py",
+      "source_sha256": "8508ec9bb596e2cdfc07854220b3bd30605f4e54aa691d4633f0ebb003bceeed",
+      "release_sha256": "8508ec9bb596e2cdfc07854220b3bd30605f4e54aa691d4633f0ebb003bceeed"
+    },
+    {
+      "path": "verl/models/qwen2/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/__init__.py",
+      "source_sha256": "8aee5796a576d05221db3a2fad83298ca997e9906a9d897575c1dc79455085c1",
+      "release_sha256": "8aee5796a576d05221db3a2fad83298ca997e9906a9d897575c1dc79455085c1"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader.py",
+      "source_sha256": "1bd5d5d2013c54e05f29d2a94a82faec4d0b0f07626fbf0edbeed3540e28bf37",
+      "release_sha256": "1bd5d5d2013c54e05f29d2a94a82faec4d0b0f07626fbf0edbeed3540e28bf37"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader_depracated.py",
+      "source_sha256": "bb017f3797aa3170ebad2fe95cbf9113ca63ec0ad72bdc18c4adad5c8a1e7f54",
+      "release_sha256": "bb017f3797aa3170ebad2fe95cbf9113ca63ec0ad72bdc18c4adad5c8a1e7f54"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_saver.py",
+      "source_sha256": "6a7865aa1e4af018ce0fe170f3f1e4b006208d6d4f416df8d794372782157d71",
+      "release_sha256": "6a7865aa1e4af018ce0fe170f3f1e4b006208d6d4f416df8d794372782157d71"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/__init__.py",
+      "source_sha256": "87d78f37ebed21b3ec1d340c136ebe03fdcc5d95cb527f75f3f3b674a1d22fc7",
+      "release_sha256": "87d78f37ebed21b3ec1d340c136ebe03fdcc5d95cb527f75f3f3b674a1d22fc7"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_attention.py",
+      "source_sha256": "83fcbfda10b727412a7f2fcccc7d3922478e5849470a5d2e530cdc243df9c0d4",
+      "release_sha256": "83fcbfda10b727412a7f2fcccc7d3922478e5849470a5d2e530cdc243df9c0d4"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_decoder.py",
+      "source_sha256": "7c3466808175885ac30b2a3b2f15bbd6534db8a1761c545a2c74d47643355b46",
+      "release_sha256": "7c3466808175885ac30b2a3b2f15bbd6534db8a1761c545a2c74d47643355b46"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_linear.py",
+      "source_sha256": "234bd3cdb743212308aeb8f501fc8b18e931d5c8b5b7367613bc24266ca08981",
+      "release_sha256": "234bd3cdb743212308aeb8f501fc8b18e931d5c8b5b7367613bc24266ca08981"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_mlp.py",
+      "source_sha256": "2bd521a8cd29ce446e0322d469d0f74bf7f0903d983db3cf3a2c7cfa8d9a04c0",
+      "release_sha256": "2bd521a8cd29ce446e0322d469d0f74bf7f0903d983db3cf3a2c7cfa8d9a04c0"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_rmsnorm.py",
+      "source_sha256": "a0c7dfaaa31622b2e5195e23c338ed466054cd22ca7e385bb19daae2ee426604",
+      "release_sha256": "a0c7dfaaa31622b2e5195e23c338ed466054cd22ca7e385bb19daae2ee426604"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/modeling_qwen2_megatron.py",
+      "source_sha256": "63d4b627e6ab165a58343f6d81c92e163014f3dd48a5dd04630f8cf32129f34b",
+      "release_sha256": "63d4b627e6ab165a58343f6d81c92e163014f3dd48a5dd04630f8cf32129f34b"
+    },
+    {
+      "path": "verl/models/registry.py",
+      "source_sha256": "b2537c7aa9738ee985a7c60c95045a44c6c92d67c15eb03bdb385962de12a1f4",
+      "release_sha256": "b2537c7aa9738ee985a7c60c95045a44c6c92d67c15eb03bdb385962de12a1f4"
+    },
+    {
+      "path": "verl/models/transformers/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/models/transformers/kimi_vl.py",
+      "source_sha256": "59ad0fa19b39fb6fe618555df776934f1beafeab7f2ba22934243c4ef41fab94",
+      "release_sha256": "59ad0fa19b39fb6fe618555df776934f1beafeab7f2ba22934243c4ef41fab94"
+    },
+    {
+      "path": "verl/models/transformers/llama.py",
+      "source_sha256": "86c5607ed27ce2f8a5306c764355bec0f3c081fb40f9020017bdcb1d68f2a61a",
+      "release_sha256": "86c5607ed27ce2f8a5306c764355bec0f3c081fb40f9020017bdcb1d68f2a61a"
+    },
+    {
+      "path": "verl/models/transformers/monkey_patch.py",
+      "source_sha256": "dc853b41d55c5652d075800f6b07fd3d7c8234ed4d35f074eb5e50724abbf98d",
+      "release_sha256": "dc853b41d55c5652d075800f6b07fd3d7c8234ed4d35f074eb5e50724abbf98d"
+    },
+    {
+      "path": "verl/models/transformers/qwen2.py",
+      "source_sha256": "2ffc374a6ec6bd1f15b7115bc726a1c7a02b36a153403391c0856556d508d93e",
+      "release_sha256": "2ffc374a6ec6bd1f15b7115bc726a1c7a02b36a153403391c0856556d508d93e"
+    },
+    {
+      "path": "verl/models/transformers/qwen2_5_vl.py",
+      "source_sha256": "d538962ea5b5db0889190ad1bf75d2375eeb6689ec0e226b9bc616002a46cc13",
+      "release_sha256": "d538962ea5b5db0889190ad1bf75d2375eeb6689ec0e226b9bc616002a46cc13"
+    },
+    {
+      "path": "verl/models/transformers/qwen2_vl.py",
+      "source_sha256": "08f13959e94cfd44bf2b2f4cd90f13fb76b1fd3d9f04fd2afb4cdd286ee4b89f",
+      "release_sha256": "08f13959e94cfd44bf2b2f4cd90f13fb76b1fd3d9f04fd2afb4cdd286ee4b89f"
+    },
+    {
+      "path": "verl/models/weight_loader_registry.py",
+      "source_sha256": "a017e9a6c332cfeff2a9a0ca57eaa5de6bf96c783fdde3ae59759566c87cf868",
+      "release_sha256": "a017e9a6c332cfeff2a9a0ca57eaa5de6bf96c783fdde3ae59759566c87cf868"
+    },
+    {
+      "path": "verl/protocol.py",
+      "source_sha256": "5c3eb002c335f7b097f7b5985751276382aab76a89941995e05b240010a815fe",
+      "release_sha256": "5c3eb002c335f7b097f7b5985751276382aab76a89941995e05b240010a815fe"
+    },
+    {
+      "path": "verl/single_controller/__init__.py",
+      "source_sha256": "bc8a469c28cee85f4c7e7bcf75733a03316a56adfb8254abd33b368253b07fe3",
+      "release_sha256": "bc8a469c28cee85f4c7e7bcf75733a03316a56adfb8254abd33b368253b07fe3"
+    },
+    {
+      "path": "verl/single_controller/base/__init__.py",
+      "source_sha256": "90b679f1bb261ca69ccc0ec2bec1fdae7372c3403521d82a420c3a6634e9b31b",
+      "release_sha256": "90b679f1bb261ca69ccc0ec2bec1fdae7372c3403521d82a420c3a6634e9b31b"
+    },
+    {
+      "path": "verl/single_controller/base/decorator.py",
+      "source_sha256": "415b902af758e6c2cccd78bfeadadeda993e6892d262a2d3387931b389db44b5",
+      "release_sha256": "415b902af758e6c2cccd78bfeadadeda993e6892d262a2d3387931b389db44b5"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/worker.py",
+      "source_sha256": "173c2e83d690c9687ea66dcc15eb7bb7241ebffc991c309f42cbaadc9499756b",
+      "release_sha256": "173c2e83d690c9687ea66dcc15eb7bb7241ebffc991c309f42cbaadc9499756b"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/worker_group.py",
+      "source_sha256": "2163689e2c403a821c444c6635bd1796ff3fd062a979a2cc7075c7a0cc1608e0",
+      "release_sha256": "2163689e2c403a821c444c6635bd1796ff3fd062a979a2cc7075c7a0cc1608e0"
+    },
+    {
+      "path": "verl/single_controller/base/register_center/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/single_controller/base/register_center/ray.py",
+      "source_sha256": "94b1003e314155fd81905f91a3ab2fa8e259244edcec8d227b3f171db8035886",
+      "release_sha256": "94b1003e314155fd81905f91a3ab2fa8e259244edcec8d227b3f171db8035886"
+    },
+    {
+      "path": "verl/single_controller/base/worker.py",
+      "source_sha256": "96de80c78a7962e98a7a3ed807f3ba16faa75f6345c252c7e308cf6c6328a310",
+      "release_sha256": "96de80c78a7962e98a7a3ed807f3ba16faa75f6345c252c7e308cf6c6328a310"
+    },
+    {
+      "path": "verl/single_controller/base/worker_group.py",
+      "source_sha256": "3ec541b5332da2d8e0dc6d06ae6562012756352b5c35009cf2c5ecc2d5f014fc",
+      "release_sha256": "3ec541b5332da2d8e0dc6d06ae6562012756352b5c35009cf2c5ecc2d5f014fc"
+    },
+    {
+      "path": "verl/single_controller/ray/__init__.py",
+      "source_sha256": "417d3731d4c7ffa3d0b7e9c001e20b99362010c3d067091e09eefd9ffbb17836",
+      "release_sha256": "417d3731d4c7ffa3d0b7e9c001e20b99362010c3d067091e09eefd9ffbb17836"
+    },
+    {
+      "path": "verl/single_controller/ray/base.py",
+      "source_sha256": "1475aab07df18a9bcacf754a454a89730b128d43acd0700ee9a7b3636bfc6909",
+      "release_sha256": "1475aab07df18a9bcacf754a454a89730b128d43acd0700ee9a7b3636bfc6909"
+    },
+    {
+      "path": "verl/single_controller/ray/megatron.py",
+      "source_sha256": "f739a7ed497890e62e993502f407169092da5bda081ba00bd8a8092efde24cdb",
+      "release_sha256": "f739a7ed497890e62e993502f407169092da5bda081ba00bd8a8092efde24cdb"
+    },
+    {
+      "path": "verl/tools/__init__.py",
+      "source_sha256": "0bae18fab65cb4028732b91a1215baf8e02f9fdf8b4762a523662a34374e7432",
+      "release_sha256": "0bae18fab65cb4028732b91a1215baf8e02f9fdf8b4762a523662a34374e7432"
+    },
+    {
+      "path": "verl/tools/base_tool.py",
+      "source_sha256": "835549c0f01a65d7222b17ea451fd8925fcee20809a371562ed7b066d33225a0",
+      "release_sha256": "835549c0f01a65d7222b17ea451fd8925fcee20809a371562ed7b066d33225a0"
+    },
+    {
+      "path": "verl/tools/gsm8k_tool.py",
+      "source_sha256": "c3e7e3bb56b66b2331119137c94e4aade40e70366f72b650be2f45a293f987e2",
+      "release_sha256": "c3e7e3bb56b66b2331119137c94e4aade40e70366f72b650be2f45a293f987e2"
+    },
+    {
+      "path": "verl/tools/sandbox_fusion_tools.py",
+      "source_sha256": "5a22e7aeb5f6cdf92acdce8762baa4eedfb00fdacdae878f75b00038e929d6aa",
+      "release_sha256": "5a22e7aeb5f6cdf92acdce8762baa4eedfb00fdacdae878f75b00038e929d6aa"
+    },
+    {
+      "path": "verl/tools/schemas.py",
+      "source_sha256": "143a372a879dc6c9b6a6a2a7925c27d3d50744b37ffedf7d4e484074e381790f",
+      "release_sha256": "143a372a879dc6c9b6a6a2a7925c27d3d50744b37ffedf7d4e484074e381790f"
+    },
+    {
+      "path": "verl/tools/search_tool.py",
+      "source_sha256": "450ad59845451c990b891c3ba187fa589e15fcc9bd77aa6bab3f8961a04e9c5a",
+      "release_sha256": "450ad59845451c990b891c3ba187fa589e15fcc9bd77aa6bab3f8961a04e9c5a"
+    },
+    {
+      "path": "verl/tools/utils/__init__.py",
+      "source_sha256": "0bae18fab65cb4028732b91a1215baf8e02f9fdf8b4762a523662a34374e7432",
+      "release_sha256": "0bae18fab65cb4028732b91a1215baf8e02f9fdf8b4762a523662a34374e7432"
+    },
+    {
+      "path": "verl/tools/utils/search_r1_like_utils.py",
+      "source_sha256": "59fbdac224928835f2df2a8423c571462cc4329227f7c67cb40204da1939dba3",
+      "release_sha256": "59fbdac224928835f2df2a8423c571462cc4329227f7c67cb40204da1939dba3"
+    },
+    {
+      "path": "verl/trainer/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/trainer/config/evaluation.yaml",
+      "source_sha256": "d290930cc2bf8fb5292e3a446a78230e809085af60aee16b0aa507ec0fb303d6",
+      "release_sha256": "d290930cc2bf8fb5292e3a446a78230e809085af60aee16b0aa507ec0fb303d6"
+    },
+    {
+      "path": "verl/trainer/config/generation.yaml",
+      "source_sha256": "97d7b7e136c574ebe0dc8626de8966ec4ed1bc7491749bc64f8f50b36975378f",
+      "release_sha256": "97d7b7e136c574ebe0dc8626de8966ec4ed1bc7491749bc64f8f50b36975378f"
+    },
+    {
+      "path": "verl/trainer/config/ppo_megatron_trainer.yaml",
+      "source_sha256": "c56bf3ebde025ab158b82ab24ad15b060f40c74ab88a5925877c292263948e6f",
+      "release_sha256": "c56bf3ebde025ab158b82ab24ad15b060f40c74ab88a5925877c292263948e6f"
+    },
+    {
+      "path": "verl/trainer/config/ppo_trainer.yaml",
+      "source_sha256": "2635721c7fa8c9f1469618418c1fe92158f3d02d04ebfee6ac07f48a816ccaf9",
+      "release_sha256": "dbb50cc1fcc372548b45d27b6b01692ec414d9006d2caae187c21d45ab4c25ba"
+    },
+    {
+      "path": "verl/trainer/config/sft_trainer.yaml",
+      "source_sha256": "4f935d0522ca5962232cd508ce3c730529bd2d60cf7a82215d9649007825b738",
+      "release_sha256": "4f935d0522ca5962232cd508ce3c730529bd2d60cf7a82215d9649007825b738"
+    },
+    {
+      "path": "verl/trainer/fsdp_sft_trainer.py",
+      "source_sha256": "95e983b18f2f6c43598f99ef417936c6a78260fcc2b95510ba62c47b0cd82e74",
+      "release_sha256": "95e983b18f2f6c43598f99ef417936c6a78260fcc2b95510ba62c47b0cd82e74"
+    },
+    {
+      "path": "verl/trainer/main_eval.py",
+      "source_sha256": "5c1b656bea6e1609c6bf8d63fcf4154562067a0d6d1a04c8a16dfb0068424b29",
+      "release_sha256": "5c1b656bea6e1609c6bf8d63fcf4154562067a0d6d1a04c8a16dfb0068424b29"
+    },
+    {
+      "path": "verl/trainer/main_generation.py",
+      "source_sha256": "2eabae33532ee6b1ddcef5beab2d075a3ffa42a68b5c603385d3fc6a3a35b603",
+      "release_sha256": "2eabae33532ee6b1ddcef5beab2d075a3ffa42a68b5c603385d3fc6a3a35b603"
+    },
+    {
+      "path": "verl/trainer/main_ppo.py",
+      "source_sha256": "73431ed969fa7831603ef49ee274f54b13ac801e26c7d25de1d3c47908a64343",
+      "release_sha256": "73431ed969fa7831603ef49ee274f54b13ac801e26c7d25de1d3c47908a64343"
+    },
+    {
+      "path": "verl/trainer/ppo/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/trainer/ppo/core_algos.py",
+      "source_sha256": "7a3c0a89a4fa464b471c7d48c14a305111b3e289f2aef359ab0f348a4907597e",
+      "release_sha256": "7a3c0a89a4fa464b471c7d48c14a305111b3e289f2aef359ab0f348a4907597e"
+    },
+    {
+      "path": "verl/trainer/ppo/fact_pipeline_filler.py",
+      "source_sha256": "20acb182e8f3b95cb01001068e2c04c0334a6f9014ddd5572e28b54c44c290ae",
+      "release_sha256": "20acb182e8f3b95cb01001068e2c04c0334a6f9014ddd5572e28b54c44c290ae"
+    },
+    {
+      "path": "verl/trainer/ppo/initial_val_gate.py",
+      "source_sha256": "95d2da0133b7a9f80c032d7a079b22316843aa9fa29e30564783a5ee7fedc26b",
+      "release_sha256": "95d2da0133b7a9f80c032d7a079b22316843aa9fa29e30564783a5ee7fedc26b"
+    },
+    {
+      "path": "verl/trainer/ppo/metric_utils.py",
+      "source_sha256": "a27aa78e4a4f51fa2cbf5766ed8a1baaaae846d4570a6ebab1e7ffdc59acee08",
+      "release_sha256": "a27aa78e4a4f51fa2cbf5766ed8a1baaaae846d4570a6ebab1e7ffdc59acee08"
+    },
+    {
+      "path": "verl/trainer/ppo/opd_fact_cards.py",
+      "source_sha256": "c79df6578f9de3666954eff23e850b985a9956f7b469bebebe35d51bace503dd",
+      "release_sha256": "466f85951ac514ecf47a8ec92994e5b13571118b83a486238ae7c44cc85dc154"
+    },
+    {
+      "path": "verl/trainer/ppo/opd_facts.py",
+      "source_sha256": "c7375ba18cd4e11cc6e7d5fb01bb7dc40fe785922445541ed9fa91a0486dffd2",
+      "release_sha256": "c7375ba18cd4e11cc6e7d5fb01bb7dc40fe785922445541ed9fa91a0486dffd2"
+    },
+    {
+      "path": "verl/trainer/ppo/opd_teacher.py",
+      "source_sha256": "0207fa6e1a011e54de8d46bcbc80066b70fa271a9f4f14d7597d8441076bfe05",
+      "release_sha256": "0207fa6e1a011e54de8d46bcbc80066b70fa271a9f4f14d7597d8441076bfe05"
+    },
+    {
+      "path": "verl/trainer/ppo/ray_trainer.py",
+      "source_sha256": "504c36d8381b186219e2550b16d92756908f7413ede96610496456c9900539f0",
+      "release_sha256": "0031939a92cdfdc7d101ddf53c4ef153a1f8b55a98ab539c85f580b6b2b74148"
+    },
+    {
+      "path": "verl/trainer/ppo/reward.py",
+      "source_sha256": "90c0869cdb3396c3a627302f16235cf415deec463db000d68aa9141cd5bd214b",
+      "release_sha256": "90c0869cdb3396c3a627302f16235cf415deec463db000d68aa9141cd5bd214b"
+    },
+    {
+      "path": "verl/trainer/runtime_env.yaml",
+      "source_sha256": "0ee662373b8662db9ab90f7715ae9476d68f0f57c150dfe824bb3f4f9f757379",
+      "release_sha256": "0ee662373b8662db9ab90f7715ae9476d68f0f57c150dfe824bb3f4f9f757379"
+    },
+    {
+      "path": "verl/utils/__init__.py",
+      "source_sha256": "6949d080c6362fcf45c00ff2c9b70219902cbbe44383ff7723ad22be001aec0c",
+      "release_sha256": "6949d080c6362fcf45c00ff2c9b70219902cbbe44383ff7723ad22be001aec0c"
+    },
+    {
+      "path": "verl/utils/activation_offload.py",
+      "source_sha256": "23d684cdcd2ac86d2a28e3fa1f13dfd4dfcace8e2ee87f652362b97247a067f8",
+      "release_sha256": "23d684cdcd2ac86d2a28e3fa1f13dfd4dfcace8e2ee87f652362b97247a067f8"
+    },
+    {
+      "path": "verl/utils/checkpoint/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/utils/checkpoint/checkpoint_manager.py",
+      "source_sha256": "5ff9f3d412aedad6f806b4918599e580129eaa4c79ecd8d919b0a4bd0faab252",
+      "release_sha256": "5ff9f3d412aedad6f806b4918599e580129eaa4c79ecd8d919b0a4bd0faab252"
+    },
+    {
+      "path": "verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "source_sha256": "dd331fe7455f70d0a6700f82715ef75b978442d6e903541b924f9c5914202df5",
+      "release_sha256": "dd331fe7455f70d0a6700f82715ef75b978442d6e903541b924f9c5914202df5"
+    },
+    {
+      "path": "verl/utils/checkpoint/megatron_checkpoint_manager.py",
+      "source_sha256": "2e7ddb03e6f953e3d656dd79b6507ef2d08a3c8a0aca91ab2bea55aaf035d951",
+      "release_sha256": "2e7ddb03e6f953e3d656dd79b6507ef2d08a3c8a0aca91ab2bea55aaf035d951"
+    },
+    {
+      "path": "verl/utils/config.py",
+      "source_sha256": "b59763b8653abf6a011abf5304c2679b9e68690d2acc33a9a05fd6cfe0aab542",
+      "release_sha256": "b59763b8653abf6a011abf5304c2679b9e68690d2acc33a9a05fd6cfe0aab542"
+    },
+    {
+      "path": "verl/utils/dataset/__init__.py",
+      "source_sha256": "dd228db2fbd127fbad9d44ed15c4602a6979dcd67c33507c6c3f21c2b298beb1",
+      "release_sha256": "dd228db2fbd127fbad9d44ed15c4602a6979dcd67c33507c6c3f21c2b298beb1"
+    },
+    {
+      "path": "verl/utils/dataset/multiturn_sft_dataset.py",
+      "source_sha256": "5cc21acc878d24898845a35797701dab26452961c135f8b0f9cc2882acc04b20",
+      "release_sha256": "5cc21acc878d24898845a35797701dab26452961c135f8b0f9cc2882acc04b20"
+    },
+    {
+      "path": "verl/utils/dataset/rl_dataset.py",
+      "source_sha256": "667bcb80fd65cc9871429b2d52be2fa80aee16f0b4275b7b303f400686454600",
+      "release_sha256": "667bcb80fd65cc9871429b2d52be2fa80aee16f0b4275b7b303f400686454600"
+    },
+    {
+      "path": "verl/utils/dataset/rm_dataset.py",
+      "source_sha256": "1a41247fa0654be0aa4537576e7f720e7c4ead3e8b4db3b376a7ed201bb2a92b",
+      "release_sha256": "1a41247fa0654be0aa4537576e7f720e7c4ead3e8b4db3b376a7ed201bb2a92b"
+    },
+    {
+      "path": "verl/utils/dataset/sft_dataset.py",
+      "source_sha256": "4e2b680e371fcc0fb07c4ba680ea6a135a907f216759eb600236b304b4c204f2",
+      "release_sha256": "4e2b680e371fcc0fb07c4ba680ea6a135a907f216759eb600236b304b4c204f2"
+    },
+    {
+      "path": "verl/utils/dataset/vision_utils.py",
+      "source_sha256": "c207b22bfd63a736da4085252c016a9f9c6ed0f0a066754228d281841fca8d31",
+      "release_sha256": "c207b22bfd63a736da4085252c016a9f9c6ed0f0a066754228d281841fca8d31"
+    },
+    {
+      "path": "verl/utils/debug/__init__.py",
+      "source_sha256": "6dc67ebdbc60ca6c1f2eb1bd29664324afa6602b3b19eed32cf90441bf351e08",
+      "release_sha256": "6dc67ebdbc60ca6c1f2eb1bd29664324afa6602b3b19eed32cf90441bf351e08"
+    },
+    {
+      "path": "verl/utils/debug/performance.py",
+      "source_sha256": "cfb7c665827aa6e32300cf7f03ae84ca34dbcc59938a98950416679378bde794",
+      "release_sha256": "cfb7c665827aa6e32300cf7f03ae84ca34dbcc59938a98950416679378bde794"
+    },
+    {
+      "path": "verl/utils/debug/profile.py",
+      "source_sha256": "19a4beec0ec04b14732ed364f11799776108ad1b6b201f5fedff6cac08db3068",
+      "release_sha256": "19a4beec0ec04b14732ed364f11799776108ad1b6b201f5fedff6cac08db3068"
+    },
+    {
+      "path": "verl/utils/debug/trajectory_tracker.py",
+      "source_sha256": "5b39e9429af79c516b077237d7f2d685ba3d311a67914bf6e9811aae49965a9c",
+      "release_sha256": "5b39e9429af79c516b077237d7f2d685ba3d311a67914bf6e9811aae49965a9c"
+    },
+    {
+      "path": "verl/utils/device.py",
+      "source_sha256": "87f58dc00b1bf0f4983ed3efa8483266a1fb7340fc29e165e4052e33b1295d1d",
+      "release_sha256": "87f58dc00b1bf0f4983ed3efa8483266a1fb7340fc29e165e4052e33b1295d1d"
+    },
+    {
+      "path": "verl/utils/distributed.py",
+      "source_sha256": "341e2f17273eb91c836c1d448a68434917b126ea3ffb0dbae760a2cb4f8f6e04",
+      "release_sha256": "341e2f17273eb91c836c1d448a68434917b126ea3ffb0dbae760a2cb4f8f6e04"
+    },
+    {
+      "path": "verl/utils/experimental/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/utils/experimental/torch_functional.py",
+      "source_sha256": "2f39f15a82ecfb73ddd43042239b1d119a6dba0c66f89b85370150f3a21330e7",
+      "release_sha256": "2f39f15a82ecfb73ddd43042239b1d119a6dba0c66f89b85370150f3a21330e7"
+    },
+    {
+      "path": "verl/utils/flops_counter.py",
+      "source_sha256": "713880badd38623975fc04247701db379048b4ec2fae404fb357334738aedeaa",
+      "release_sha256": "713880badd38623975fc04247701db379048b4ec2fae404fb357334738aedeaa"
+    },
+    {
+      "path": "verl/utils/fs.py",
+      "source_sha256": "6bb4abf45066a0914b6648202bd010195e1432a6c61b9b82663b9c0793e4485e",
+      "release_sha256": "6bb4abf45066a0914b6648202bd010195e1432a6c61b9b82663b9c0793e4485e"
+    },
+    {
+      "path": "verl/utils/fsdp_utils.py",
+      "source_sha256": "b2a9ef9df5a75f84e5f501064ed26e36366e5618afd886d9ed4b044a78847451",
+      "release_sha256": "b2a9ef9df5a75f84e5f501064ed26e36366e5618afd886d9ed4b044a78847451"
+    },
+    {
+      "path": "verl/utils/hdfs_io.py",
+      "source_sha256": "14ea05cfdf000666899109a417d8d8bd23cb02afc43e06c16a861a3020590bd8",
+      "release_sha256": "14ea05cfdf000666899109a417d8d8bd23cb02afc43e06c16a861a3020590bd8"
+    },
+    {
+      "path": "verl/utils/import_utils.py",
+      "source_sha256": "98b2d45a6b8d9bfb9e5b31ae52f50e2bd8f03804348fad8b58c75b73cba3c57a",
+      "release_sha256": "98b2d45a6b8d9bfb9e5b31ae52f50e2bd8f03804348fad8b58c75b73cba3c57a"
+    },
+    {
+      "path": "verl/utils/logger/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/utils/logger/aggregate_logger.py",
+      "source_sha256": "ba97ffc42985454bf43beaccae83d9667da6d88273e484608df0db342523054d",
+      "release_sha256": "ba97ffc42985454bf43beaccae83d9667da6d88273e484608df0db342523054d"
+    },
+    {
+      "path": "verl/utils/logging_utils.py",
+      "source_sha256": "72f6abe76274ecee5812c90879dc8f0b40e68d105c91da32a8923b8862320294",
+      "release_sha256": "72f6abe76274ecee5812c90879dc8f0b40e68d105c91da32a8923b8862320294"
+    },
+    {
+      "path": "verl/utils/megatron/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/utils/megatron/memory.py",
+      "source_sha256": "5d2ff5ee71fbdfcb6273dac912d2e2aeb55c95ec8d0eb7a784cfa1549cfd01cf",
+      "release_sha256": "5d2ff5ee71fbdfcb6273dac912d2e2aeb55c95ec8d0eb7a784cfa1549cfd01cf"
+    },
+    {
+      "path": "verl/utils/megatron/optimizer.py",
+      "source_sha256": "63483cc10966303d47b1a509ff1369fc2a296da26a3cc1b706376b905b1c13a6",
+      "release_sha256": "63483cc10966303d47b1a509ff1369fc2a296da26a3cc1b706376b905b1c13a6"
+    },
+    {
+      "path": "verl/utils/megatron/pipeline_parallel.py",
+      "source_sha256": "b1bcc5ed48abd97f520b95f2c650d93e3a5f2c0c3518eb7baa4984c069f74781",
+      "release_sha256": "b1bcc5ed48abd97f520b95f2c650d93e3a5f2c0c3518eb7baa4984c069f74781"
+    },
+    {
+      "path": "verl/utils/megatron/sequence_parallel.py",
+      "source_sha256": "8acb3406dd403eeab34a972e172982001c451e5e804ba0cf833a511a43f2a915",
+      "release_sha256": "8acb3406dd403eeab34a972e172982001c451e5e804ba0cf833a511a43f2a915"
+    },
+    {
+      "path": "verl/utils/megatron/tensor_parallel.py",
+      "source_sha256": "bf6a2a59719a8f264dce6acceed6d2e237308a3646d2794bc33031203f71f35e",
+      "release_sha256": "bf6a2a59719a8f264dce6acceed6d2e237308a3646d2794bc33031203f71f35e"
+    },
+    {
+      "path": "verl/utils/megatron_utils.py",
+      "source_sha256": "0d434d308af363fcae60bea80b9cf561a54a655821dc5aebdcd0fa92b5ada3e9",
+      "release_sha256": "0d434d308af363fcae60bea80b9cf561a54a655821dc5aebdcd0fa92b5ada3e9"
+    },
+    {
+      "path": "verl/utils/memory_buffer.py",
+      "source_sha256": "8f66b5d585fad7713a302ea45cb97b55a41bac94c394d848c951942e96ddb72e",
+      "release_sha256": "8f66b5d585fad7713a302ea45cb97b55a41bac94c394d848c951942e96ddb72e"
+    },
+    {
+      "path": "verl/utils/metric/__init__.py",
+      "source_sha256": "0446c5125e52e296b4f3e54f766f0d0b9c5544648f02e6fecc1d83ea450be5e6",
+      "release_sha256": "0446c5125e52e296b4f3e54f766f0d0b9c5544648f02e6fecc1d83ea450be5e6"
+    },
+    {
+      "path": "verl/utils/metric/utils.py",
+      "source_sha256": "3b0ba8bb833d2859ac533c8b0054ca8dd87023f2f1809f9aed9e4a63c383fedf",
+      "release_sha256": "3b0ba8bb833d2859ac533c8b0054ca8dd87023f2f1809f9aed9e4a63c383fedf"
+    },
+    {
+      "path": "verl/utils/model.py",
+      "source_sha256": "eb493ec8a924ca77ca58258c585423c9015d900e642b788d692d75e717ae3565",
+      "release_sha256": "eb493ec8a924ca77ca58258c585423c9015d900e642b788d692d75e717ae3565"
+    },
+    {
+      "path": "verl/utils/net_utils.py",
+      "source_sha256": "3088a0ee3f514390cf503abbd53e6b0d68369383bd9585e566d476033bd9d5be",
+      "release_sha256": "3088a0ee3f514390cf503abbd53e6b0d68369383bd9585e566d476033bd9d5be"
+    },
+    {
+      "path": "verl/utils/py_functional.py",
+      "source_sha256": "64b32ddbf7c5490b9273a5e48d19d57e5363211f7c977f528756a60cb4f14991",
+      "release_sha256": "64b32ddbf7c5490b9273a5e48d19d57e5363211f7c977f528756a60cb4f14991"
+    },
+    {
+      "path": "verl/utils/ray_utils.py",
+      "source_sha256": "353328cdaf1dd19a159f3f5986d918da7840e239449422c062223f8ef911afe0",
+      "release_sha256": "353328cdaf1dd19a159f3f5986d918da7840e239449422c062223f8ef911afe0"
+    },
+    {
+      "path": "verl/utils/rendezvous/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/utils/rendezvous/ray_backend.py",
+      "source_sha256": "4814a8bdd6db2c98179c6e409d34a476c275c9b773137822d00c1772eeeca9b2",
+      "release_sha256": "4814a8bdd6db2c98179c6e409d34a476c275c9b773137822d00c1772eeeca9b2"
+    },
+    {
+      "path": "verl/utils/reward_score/__init__.py",
+      "source_sha256": "23a09782cbf3b763dc083d212d57ae21d02b8cc8a7412b8d0c77fcb8e68b1607",
+      "release_sha256": "23a09782cbf3b763dc083d212d57ae21d02b8cc8a7412b8d0c77fcb8e68b1607"
+    },
+    {
+      "path": "verl/utils/reward_score/geo3k.py",
+      "source_sha256": "cd1c7bd9976b03ef47c92218ae5ebe120463580333dfddf9b4bb415174af7a0f",
+      "release_sha256": "cd1c7bd9976b03ef47c92218ae5ebe120463580333dfddf9b4bb415174af7a0f"
+    },
+    {
+      "path": "verl/utils/reward_score/gsm8k.py",
+      "source_sha256": "f672bbccb69d0eaea08ac915807a54016bc5905a267ec9e999177dc4f9bdace6",
+      "release_sha256": "f672bbccb69d0eaea08ac915807a54016bc5905a267ec9e999177dc4f9bdace6"
+    },
+    {
+      "path": "verl/utils/reward_score/math.py",
+      "source_sha256": "2b3bfa2a7100adb944a8cc7c94d9517b19d6f9d9c3cf7d6c69fa6e5db44dd734",
+      "release_sha256": "2b3bfa2a7100adb944a8cc7c94d9517b19d6f9d9c3cf7d6c69fa6e5db44dd734"
+    },
+    {
+      "path": "verl/utils/reward_score/math_batch.py",
+      "source_sha256": "e9c41c0d8db23312a19450f4b82ffe23e19e370a3d15539039821fa2365211b7",
+      "release_sha256": "e9c41c0d8db23312a19450f4b82ffe23e19e370a3d15539039821fa2365211b7"
+    },
+    {
+      "path": "verl/utils/reward_score/math_dapo.py",
+      "source_sha256": "a2adc51a5ce168a00add79dae2f269b3a034142d1cc8ca150bf446190c0915a5",
+      "release_sha256": "a2adc51a5ce168a00add79dae2f269b3a034142d1cc8ca150bf446190c0915a5"
+    },
+    {
+      "path": "verl/utils/reward_score/math_verify.py",
+      "source_sha256": "0bf89ab36401642a42bfacc53b8a954d87b168a11fca0dc9014c9d1e21ecded3",
+      "release_sha256": "0bf89ab36401642a42bfacc53b8a954d87b168a11fca0dc9014c9d1e21ecded3"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_code/__init__.py",
+      "source_sha256": "139690b83b2b21c0797696e07a36f24a206808183793d29fb15a5d49b8e58efc",
+      "release_sha256": "139690b83b2b21c0797696e07a36f24a206808183793d29fb15a5d49b8e58efc"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_code/testing_util.py",
+      "source_sha256": "2d89b36ddadc0d9b8d9760a5e72f28cf6d9922faa5fd89f430e29ec5b83ca15b",
+      "release_sha256": "2d89b36ddadc0d9b8d9760a5e72f28cf6d9922faa5fd89f430e29ec5b83ca15b"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_code/utils.py",
+      "source_sha256": "a85e7d0cb7f5caf2615c6d0861e695102f3c0e0a19ddae29efb1e726297aa67c",
+      "release_sha256": "a85e7d0cb7f5caf2615c6d0861e695102f3c0e0a19ddae29efb1e726297aa67c"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_math/__init__.py",
+      "source_sha256": "95bf9911bcc5648da35dd8950c8c31de406c5ecf593e7a5f933a8ff05a24a429",
+      "release_sha256": "95bf9911bcc5648da35dd8950c8c31de406c5ecf593e7a5f933a8ff05a24a429"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_math/grader.py",
+      "source_sha256": "3270158db811fcb4fdaf1528dee7d6cf9fe6d6045c1a7c9c46e90752d9586852",
+      "release_sha256": "3270158db811fcb4fdaf1528dee7d6cf9fe6d6045c1a7c9c46e90752d9586852"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_math/math_normalize.py",
+      "source_sha256": "ed49fc57757e0d3662c4ecaec3f6c503e0b8bc6d2171e2391ebc4382bffecff4",
+      "release_sha256": "ed49fc57757e0d3662c4ecaec3f6c503e0b8bc6d2171e2391ebc4382bffecff4"
+    },
+    {
+      "path": "verl/utils/reward_score/sandbox_fusion/__init__.py",
+      "source_sha256": "8c91682ec1127c83e1dd24e471d841d2c9e0d0f433f986e540627c307a7980c2",
+      "release_sha256": "8c91682ec1127c83e1dd24e471d841d2c9e0d0f433f986e540627c307a7980c2"
+    },
+    {
+      "path": "verl/utils/reward_score/sandbox_fusion/utils.py",
+      "source_sha256": "2f99681c3afd8dd4997e015330f549d581290803a7112c2f51251d54d987fb1c",
+      "release_sha256": "2f99681c3afd8dd4997e015330f549d581290803a7112c2f51251d54d987fb1c"
+    },
+    {
+      "path": "verl/utils/reward_score/search_r1_like_qa_em.py",
+      "source_sha256": "8070e4d07719f23e626968b983c597918c73d15c6ab5b09c5346e7311d0cac83",
+      "release_sha256": "8070e4d07719f23e626968b983c597918c73d15c6ab5b09c5346e7311d0cac83"
+    },
+    {
+      "path": "verl/utils/seqlen_balancing.py",
+      "source_sha256": "330e5082c3b0779c69198472f6268d07d1fcf41673a91b222a6392feec18fe30",
+      "release_sha256": "330e5082c3b0779c69198472f6268d07d1fcf41673a91b222a6392feec18fe30"
+    },
+    {
+      "path": "verl/utils/tokenizer.py",
+      "source_sha256": "f2d489cc98e2be2bfe788639d785323f8a6ef1a5b67127a23d2f9dde0fc6b357",
+      "release_sha256": "f2d489cc98e2be2bfe788639d785323f8a6ef1a5b67127a23d2f9dde0fc6b357"
+    },
+    {
+      "path": "verl/utils/torch_dtypes.py",
+      "source_sha256": "fc10a925f0ff4c1d103daf4643e436892f76ec00c02d930414ec9c2bf7a05aaf",
+      "release_sha256": "fc10a925f0ff4c1d103daf4643e436892f76ec00c02d930414ec9c2bf7a05aaf"
+    },
+    {
+      "path": "verl/utils/torch_functional.py",
+      "source_sha256": "6b3cc213cb26668e36c1e30f58a18b6d7dcf5546f63599e0c0fd8cc13b0563c6",
+      "release_sha256": "6b3cc213cb26668e36c1e30f58a18b6d7dcf5546f63599e0c0fd8cc13b0563c6"
+    },
+    {
+      "path": "verl/utils/tracking.py",
+      "source_sha256": "bef87b2bbc6f33306b8ca4bf76a9a57f049caaff96dd3f6d7e7d10fa33444a5b",
+      "release_sha256": "bef87b2bbc6f33306b8ca4bf76a9a57f049caaff96dd3f6d7e7d10fa33444a5b"
+    },
+    {
+      "path": "verl/utils/ulysses.py",
+      "source_sha256": "ea0c3f12f28726f6204134104fdb381cbc5791cd39c26a9ea12e03f73853f839",
+      "release_sha256": "ea0c3f12f28726f6204134104fdb381cbc5791cd39c26a9ea12e03f73853f839"
+    },
+    {
+      "path": "verl/utils/vllm_utils.py",
+      "source_sha256": "d7e597aea835beba578d48533416db7d3156d144e3eb9f55353f98f08b4540d6",
+      "release_sha256": "d7e597aea835beba578d48533416db7d3156d144e3eb9f55353f98f08b4540d6"
+    },
+    {
+      "path": "verl/version/version",
+      "source_sha256": "9fd0085421e73ed39c34f1e1743aefcc4150ccdf512665beafb33a4c84a47d8d",
+      "release_sha256": "9fd0085421e73ed39c34f1e1743aefcc4150ccdf512665beafb33a4c84a47d8d"
+    },
+    {
+      "path": "verl/workers/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/workers/actor/__init__.py",
+      "source_sha256": "3053474474716dc57f7e1b5d80d23b28c7b146d9257f8b6bf3b7878de4eae219",
+      "release_sha256": "3053474474716dc57f7e1b5d80d23b28c7b146d9257f8b6bf3b7878de4eae219"
+    },
+    {
+      "path": "verl/workers/actor/base.py",
+      "source_sha256": "fe023ef5dece8e915a4b38e15e06daa85381daae569b963f38a92f0a834907cd",
+      "release_sha256": "fe023ef5dece8e915a4b38e15e06daa85381daae569b963f38a92f0a834907cd"
+    },
+    {
+      "path": "verl/workers/actor/dp_actor.py",
+      "source_sha256": "cb2dd7feec5da31680007c4945f5f3081f04a809225aea273aa2de7c9a81c78f",
+      "release_sha256": "cb2dd7feec5da31680007c4945f5f3081f04a809225aea273aa2de7c9a81c78f"
+    },
+    {
+      "path": "verl/workers/actor/megatron_actor.py",
+      "source_sha256": "c43e83582282eeb595298b72fe39003d86f7068cc0750b59a3a63afdd61d3671",
+      "release_sha256": "c43e83582282eeb595298b72fe39003d86f7068cc0750b59a3a63afdd61d3671"
+    },
+    {
+      "path": "verl/workers/critic/__init__.py",
+      "source_sha256": "a61c624ef2dd6bec59cc59302d88d1ccdc151ea5beb776b9733ac19bcfbe8fb7",
+      "release_sha256": "a61c624ef2dd6bec59cc59302d88d1ccdc151ea5beb776b9733ac19bcfbe8fb7"
+    },
+    {
+      "path": "verl/workers/critic/base.py",
+      "source_sha256": "9088e17a21d2aea6c524380e1eeb10eaf19df2719cc5d343cb4debafd8da033a",
+      "release_sha256": "9088e17a21d2aea6c524380e1eeb10eaf19df2719cc5d343cb4debafd8da033a"
+    },
+    {
+      "path": "verl/workers/critic/dp_critic.py",
+      "source_sha256": "6256866fab3634dce663a753d188586916c9e13ed467ee33d4cddd0e3da8fd3c",
+      "release_sha256": "6256866fab3634dce663a753d188586916c9e13ed467ee33d4cddd0e3da8fd3c"
+    },
+    {
+      "path": "verl/workers/critic/megatron_critic.py",
+      "source_sha256": "f77c82b0dbf132e5cc46c68dc56c0682eb12e634a5bd84308b35e3bebd35773a",
+      "release_sha256": "f77c82b0dbf132e5cc46c68dc56c0682eb12e634a5bd84308b35e3bebd35773a"
+    },
+    {
+      "path": "verl/workers/fsdp_workers.py",
+      "source_sha256": "f05c4d7198378a8559f0a2457b2929db5856f010ba923cfba5e1fb5299f1dfb8",
+      "release_sha256": "f05c4d7198378a8559f0a2457b2929db5856f010ba923cfba5e1fb5299f1dfb8"
+    },
+    {
+      "path": "verl/workers/megatron_workers.py",
+      "source_sha256": "08fa3cf52babd74ad8856039466a1030b850c88c3f7b7f8c9d24090ff77a1f4a",
+      "release_sha256": "08fa3cf52babd74ad8856039466a1030b850c88c3f7b7f8c9d24090ff77a1f4a"
+    },
+    {
+      "path": "verl/workers/reward_manager/__init__.py",
+      "source_sha256": "cc27bdd99ee5141c98eb7277ca847f02a837dbc2153a50b16446bb94f4b000fc",
+      "release_sha256": "cc27bdd99ee5141c98eb7277ca847f02a837dbc2153a50b16446bb94f4b000fc"
+    },
+    {
+      "path": "verl/workers/reward_manager/batch.py",
+      "source_sha256": "e2016f7f4c5637bbb0dbec7589440797eff23c1a058b63bf63ab44d6f5218cb9",
+      "release_sha256": "e2016f7f4c5637bbb0dbec7589440797eff23c1a058b63bf63ab44d6f5218cb9"
+    },
+    {
+      "path": "verl/workers/reward_manager/dapo.py",
+      "source_sha256": "0232791df2bf6b092a4e110ba3975156eb46a14d61023bedab5502fb8ad93db3",
+      "release_sha256": "0232791df2bf6b092a4e110ba3975156eb46a14d61023bedab5502fb8ad93db3"
+    },
+    {
+      "path": "verl/workers/reward_manager/naive.py",
+      "source_sha256": "a1060c53bcffcb20e376a68bbfcc8f4ed81a6654888784b5969d9a8400d93fb2",
+      "release_sha256": "a1060c53bcffcb20e376a68bbfcc8f4ed81a6654888784b5969d9a8400d93fb2"
+    },
+    {
+      "path": "verl/workers/reward_manager/prime.py",
+      "source_sha256": "21107bb683fe4906a41b0fe826451724fbccf1470b02b90842419309e2820d64",
+      "release_sha256": "21107bb683fe4906a41b0fe826451724fbccf1470b02b90842419309e2820d64"
+    },
+    {
+      "path": "verl/workers/reward_model/__init__.py",
+      "source_sha256": "c8e1a52f1a40f97bb885a5667ce0bc936f09d8416ca90243148417f416c4456c",
+      "release_sha256": "c8e1a52f1a40f97bb885a5667ce0bc936f09d8416ca90243148417f416c4456c"
+    },
+    {
+      "path": "verl/workers/reward_model/base.py",
+      "source_sha256": "9e3c68d62138dc39ca99b8f1cbbe01c24cf9b3a85a6a30e08fe59c910452de18",
+      "release_sha256": "9e3c68d62138dc39ca99b8f1cbbe01c24cf9b3a85a6a30e08fe59c910452de18"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron/__init__.py",
+      "source_sha256": "b820fe8d2c91d40953937619463b5bce5efc8e296725a673bfcfe41d5a262d6d",
+      "release_sha256": "b820fe8d2c91d40953937619463b5bce5efc8e296725a673bfcfe41d5a262d6d"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron/reward_model.py",
+      "source_sha256": "b05488279566a5100e5e5852da87060eb15a0517029cedeb7b19e86774616656",
+      "release_sha256": "b05488279566a5100e5e5852da87060eb15a0517029cedeb7b19e86774616656"
+    },
+    {
+      "path": "verl/workers/rollout/__init__.py",
+      "source_sha256": "4e772ac911483c3fa4ad7b301f532d10fd9a10ccd6fcc0aaa82a29cd9df14b7f",
+      "release_sha256": "4e772ac911483c3fa4ad7b301f532d10fd9a10ccd6fcc0aaa82a29cd9df14b7f"
+    },
+    {
+      "path": "verl/workers/rollout/async_server.py",
+      "source_sha256": "1ef405f77fd58c54aecdb073abe5704d1842f3e6180ad92d60b28b0f0dc5b773",
+      "release_sha256": "1ef405f77fd58c54aecdb073abe5704d1842f3e6180ad92d60b28b0f0dc5b773"
+    },
+    {
+      "path": "verl/workers/rollout/base.py",
+      "source_sha256": "d59145537f10a1b8e385cc4991d0356fb3f337cfe09600c40cac8670403b7945",
+      "release_sha256": "d59145537f10a1b8e385cc4991d0356fb3f337cfe09600c40cac8670403b7945"
+    },
+    {
+      "path": "verl/workers/rollout/hf_rollout.py",
+      "source_sha256": "ec8311cd214f5468f27668378a4cd205d07c7ef27c3766a1b09c7cc02fc8ecfa",
+      "release_sha256": "ec8311cd214f5468f27668378a4cd205d07c7ef27c3766a1b09c7cc02fc8ecfa"
+    },
+    {
+      "path": "verl/workers/rollout/naive/__init__.py",
+      "source_sha256": "68176cf43c79bc96d5549d1950e402f391f39ddd62582ffaac62d649015af785",
+      "release_sha256": "68176cf43c79bc96d5549d1950e402f391f39ddd62582ffaac62d649015af785"
+    },
+    {
+      "path": "verl/workers/rollout/naive/naive_rollout.py",
+      "source_sha256": "f243226fbb0db0cf2d2e2c3c96730da81994ef358c2c06921c98564164356edc",
+      "release_sha256": "f243226fbb0db0cf2d2e2c3c96730da81994ef358c2c06921c98564164356edc"
+    },
+    {
+      "path": "verl/workers/rollout/schemas.py",
+      "source_sha256": "16c43f89a26c8a1d87a72c1517c1506fd07b2ef62d0155bcb1c1955e8a5ddf82",
+      "release_sha256": "16c43f89a26c8a1d87a72c1517c1506fd07b2ef62d0155bcb1c1955e8a5ddf82"
+    },
+    {
+      "path": "verl/workers/rollout/sglang_rollout/__init__.py",
+      "source_sha256": "75183db302121275b3f66320e61ef9c82431c11b8c4945939fd64ea4f1f3455e",
+      "release_sha256": "75183db302121275b3f66320e61ef9c82431c11b8c4945939fd64ea4f1f3455e"
+    },
+    {
+      "path": "verl/workers/rollout/sglang_rollout/async_sglang_server.py",
+      "source_sha256": "189b7972755fc1d313f52931100fe72de2107df0e1c3b20931640c89a2990cbf",
+      "release_sha256": "189b7972755fc1d313f52931100fe72de2107df0e1c3b20931640c89a2990cbf"
+    },
+    {
+      "path": "verl/workers/rollout/sglang_rollout/sglang_rollout.py",
+      "source_sha256": "477e58382b2c7c090905c910ae5cc789810bbd4ef5833270577236b201eab014",
+      "release_sha256": "477e58382b2c7c090905c910ae5cc789810bbd4ef5833270577236b201eab014"
+    },
+    {
+      "path": "verl/workers/rollout/sglang_rollout/utils.py",
+      "source_sha256": "c5f7715e8dd310f8af075b02f88ab4ebe0f1db5806dc69b814c2a9a74988bcb6",
+      "release_sha256": "c5f7715e8dd310f8af075b02f88ab4ebe0f1db5806dc69b814c2a9a74988bcb6"
+    },
+    {
+      "path": "verl/workers/rollout/tokenizer.py",
+      "source_sha256": "906eec0d40724dbca4ae9477656d708a5b17f924e1d160acde4b691bba48ddff",
+      "release_sha256": "906eec0d40724dbca4ae9477656d708a5b17f924e1d160acde4b691bba48ddff"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/__init__.py",
+      "source_sha256": "504f49b0c2424855d5d3d2d57179b7ed99e02f7c5da0295bb9ddd4749cb45731",
+      "release_sha256": "504f49b0c2424855d5d3d2d57179b7ed99e02f7c5da0295bb9ddd4749cb45731"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/fire_vllm_rollout.py",
+      "source_sha256": "a621e36289182cc5646a93f0470e45f287dd111355c9bbf925c0918e85036ec8",
+      "release_sha256": "a621e36289182cc5646a93f0470e45f287dd111355c9bbf925c0918e85036ec8"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/vllm_async_server.py",
+      "source_sha256": "27299b32bc144fde78919416af01c0b581b92294db574e4c73dec51078d4e770",
+      "release_sha256": "27299b32bc144fde78919416af01c0b581b92294db574e4c73dec51078d4e770"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+      "source_sha256": "448140bd877dd631e16c892bd102e3b8a7da779ede17b5895604bc4459304ab1",
+      "release_sha256": "448140bd877dd631e16c892bd102e3b8a7da779ede17b5895604bc4459304ab1"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py",
+      "source_sha256": "6bb931fc54233a92d8f3b0a7e4ebe58272561cf1a6b3e5b70925822f2d404655",
+      "release_sha256": "6bb931fc54233a92d8f3b0a7e4ebe58272561cf1a6b3e5b70925822f2d404655"
+    },
+    {
+      "path": "verl/workers/sharding_manager/__init__.py",
+      "source_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+      "release_sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "verl/workers/sharding_manager/base.py",
+      "source_sha256": "23a713b4f06336e6768acb4bf8621e05256be32af3abf2f0bd8accc10082a974",
+      "release_sha256": "23a713b4f06336e6768acb4bf8621e05256be32af3abf2f0bd8accc10082a974"
+    },
+    {
+      "path": "verl/workers/sharding_manager/fsdp_sglang.py",
+      "source_sha256": "881a1e07e3bd09ad934d0105e53e221d74721847bf70a859552051816798d975",
+      "release_sha256": "881a1e07e3bd09ad934d0105e53e221d74721847bf70a859552051816798d975"
+    },
+    {
+      "path": "verl/workers/sharding_manager/fsdp_ulysses.py",
+      "source_sha256": "196bddf4f25815a48f94f7e8991f1dd8bc1477204acf6e0b0ea54a553a0784dc",
+      "release_sha256": "196bddf4f25815a48f94f7e8991f1dd8bc1477204acf6e0b0ea54a553a0784dc"
+    },
+    {
+      "path": "verl/workers/sharding_manager/fsdp_vllm.py",
+      "source_sha256": "d96e95942a2dd59de9c7e4289649aa23b7e2e4d061864dfdcf1498165cfa492b",
+      "release_sha256": "d96e95942a2dd59de9c7e4289649aa23b7e2e4d061864dfdcf1498165cfa492b"
+    },
+    {
+      "path": "verl/workers/sharding_manager/megatron_sglang.py",
+      "source_sha256": "5cdf8a74320a1091dba4a17ae67651397bda2df682d99a903aceb376e84a1311",
+      "release_sha256": "5cdf8a74320a1091dba4a17ae67651397bda2df682d99a903aceb376e84a1311"
+    },
+    {
+      "path": "verl/workers/sharding_manager/megatron_vllm.py",
+      "source_sha256": "a06b2d2d363babb5e1d2eebd0de8abdb45bd74e7f58729aae4a81dc4406b5193",
+      "release_sha256": "a06b2d2d363babb5e1d2eebd0de8abdb45bd74e7f58729aae4a81dc4406b5193"
+    },
+    {
+      "path": "agent_system/agent/__init__.py",
+      "source_sha256": "3d36d0f5b69c32ef237b24e3f1d8cb97c5068caae9bfa6e91d637865752d80e7",
+      "release_sha256": "3d36d0f5b69c32ef237b24e3f1d8cb97c5068caae9bfa6e91d637865752d80e7"
+    },
+    {
+      "path": "agent_system/agent/agents/base.py",
+      "source_sha256": "477770f28d5926f57fea7f853c61f331e4f07ae45d5f8327b3f46532bfdb5200",
+      "release_sha256": "477770f28d5926f57fea7f853c61f331e4f07ae45d5f8327b3f46532bfdb5200"
+    },
+    {
+      "path": "agent_system/agent/agents/math/__init__.py",
+      "source_sha256": "6b26717c6a833926f5dd4db33fbbb7a5a0c35f02f6bd2e9fdaaff05ca6f66fb4",
+      "release_sha256": "6b26717c6a833926f5dd4db33fbbb7a5a0c35f02f6bd2e9fdaaff05ca6f66fb4"
+    },
+    {
+      "path": "agent_system/agent/agents/math/judger_agent.py",
+      "source_sha256": "d1c0e1b01a6fe62a3b95640918a89d822541b596ebc92d566cd18cad353d6a2c",
+      "release_sha256": "d1c0e1b01a6fe62a3b95640918a89d822541b596ebc92d566cd18cad353d6a2c"
+    },
+    {
+      "path": "agent_system/agent/agents/math/solver_agent.py",
+      "source_sha256": "c34f01e21990c454793c87b575ce0ebc69d8ace16f0e270578229b94546ce537",
+      "release_sha256": "c34f01e21990c454793c87b575ce0ebc69d8ace16f0e270578229b94546ce537"
+    },
+    {
+      "path": "agent_system/agent/agents/math/verifier_agent.py",
+      "source_sha256": "104af29a1ebec019193825a6f56e63a84462cdad8b225ff070857cc1d7fc1f3f",
+      "release_sha256": "104af29a1ebec019193825a6f56e63a84462cdad8b225ff070857cc1d7fc1f3f"
+    },
+    {
+      "path": "agent_system/agent/orchestra/base.py",
+      "source_sha256": "399c59d364c908110415958535f5a80fc860b2f9c82581b6671265d848c4f21f",
+      "release_sha256": "399c59d364c908110415958535f5a80fc860b2f9c82581b6671265d848c4f21f"
+    },
+    {
+      "path": "agent_system/agent/orchestra/math/__init__.py",
+      "source_sha256": "ce1c6c2d28637541f0cfab9fc24fda26b910382ded80ebddaa848c9b045967ba",
+      "release_sha256": "ce1c6c2d28637541f0cfab9fc24fda26b910382ded80ebddaa848c9b045967ba"
+    },
+    {
+      "path": "agent_system/agent/orchestra/math/math_orchestra.py",
+      "source_sha256": "972facca5ac6519605d2f273a66c36043a0eff65c3a7515f8186503e783d6a54",
+      "release_sha256": "972facca5ac6519605d2f273a66c36043a0eff65c3a7515f8186503e783d6a54"
+    },
+    {
+      "path": "agent_system/agent/orchestra/math/privileged_math_orchestra.py",
+      "source_sha256": "6191036f189ab6862d7f39896969ccd4bc1fd5a4247288eccf330054f839fd2d",
+      "release_sha256": "6191036f189ab6862d7f39896969ccd4bc1fd5a4247288eccf330054f839fd2d"
+    },
+    {
+      "path": "agent_system/agent/registry.py",
+      "source_sha256": "c52818ee51ac11ac037643264b72c3eb1159ff381d08a4dea85a89b8bcc65094",
+      "release_sha256": "c52818ee51ac11ac037643264b72c3eb1159ff381d08a4dea85a89b8bcc65094"
+    },
+    {
+      "path": "agent_system/agent/utils.py",
+      "source_sha256": "682db1e7dfec8fcb519e3cfcc3a75a584bd597c79d3067f0e582494e39169162",
+      "release_sha256": "682db1e7dfec8fcb519e3cfcc3a75a584bd597c79d3067f0e582494e39169162"
+    },
+    {
+      "path": "agent_system/environments/__init__.py",
+      "source_sha256": "f3b21e785c5808d593eebca0eca5fa37ed9db8d52ca8b8194f2eb7694a4627c8",
+      "release_sha256": "f3b21e785c5808d593eebca0eca5fa37ed9db8d52ca8b8194f2eb7694a4627c8"
+    },
+    {
+      "path": "agent_system/environments/base.py",
+      "source_sha256": "8a8a97c319a5f5e9bef766fe9f7253da3adcc283f7eeffeae7adede30c1c5cbe",
+      "release_sha256": "8a8a97c319a5f5e9bef766fe9f7253da3adcc283f7eeffeae7adede30c1c5cbe"
+    },
+    {
+      "path": "agent_system/environments/env_manager.py",
+      "source_sha256": "8591aac5c6de013a79205fbddeb73345dcf9eb7aa1b0b144bc21e0dc555fd8ea",
+      "release_sha256": "8591aac5c6de013a79205fbddeb73345dcf9eb7aa1b0b144bc21e0dc555fd8ea"
+    },
+    {
+      "path": "agent_system/environments/env_package/math/__init__.py",
+      "source_sha256": "2b0f7db4d62bbff9bb01c86af7ec1395e24ee949468a21b8b4e089be81079369",
+      "release_sha256": "2b0f7db4d62bbff9bb01c86af7ec1395e24ee949468a21b8b4e089be81079369"
+    },
+    {
+      "path": "agent_system/environments/env_package/math/envs.py",
+      "source_sha256": "c2ac6f1bca2ddad3be17bcd0708ad17f2e0fb3d39246d8011718e495f62fad1a",
+      "release_sha256": "c2ac6f1bca2ddad3be17bcd0708ad17f2e0fb3d39246d8011718e495f62fad1a"
+    },
+    {
+      "path": "agent_system/environments/env_package/math/math_reward.py",
+      "source_sha256": "24f7a0551456d037cd3e05e1d770bef030dc59937214234690e0224521d96531",
+      "release_sha256": "24f7a0551456d037cd3e05e1d770bef030dc59937214234690e0224521d96531"
+    },
+    {
+      "path": "agent_system/environments/env_package/math/projection.py",
+      "source_sha256": "ff58fb4394977bd8e9a874216664b4849dfbd94daa340ccc67fd13ac43374c21",
+      "release_sha256": "ff58fb4394977bd8e9a874216664b4849dfbd94daa340ccc67fd13ac43374c21"
+    },
+    {
+      "path": "agent_system/environments/env_package/math/utils.py",
+      "source_sha256": "bf4935f2295747c336a4f61c84e2b0b93d18adcc6ea8b4fc6e8f9c4580e066e0",
+      "release_sha256": "bf4935f2295747c336a4f61c84e2b0b93d18adcc6ea8b4fc6e8f9c4580e066e0"
+    },
+    {
+      "path": "agent_system/environments/prompts/__init__.py",
+      "source_sha256": "a472ca795cc977ae24356a47e15a36179dd4d658915d010802c010683070e454",
+      "release_sha256": "a472ca795cc977ae24356a47e15a36179dd4d658915d010802c010683070e454"
+    },
+    {
+      "path": "agent_system/environments/prompts/math.py",
+      "source_sha256": "3dfc18362687eb88d5e1416c8fb209efcbc588c57144343fe24fdb71772dacdc",
+      "release_sha256": "3dfc18362687eb88d5e1416c8fb209efcbc588c57144343fe24fdb71772dacdc"
+    },
+    {
+      "path": "agent_system/environments/prompts/search.py",
+      "source_sha256": "b5ae1cf20df291bfcf5e9824227b68cb40a81a173bff1e3e63faa04992361f1e",
+      "release_sha256": "b5ae1cf20df291bfcf5e9824227b68cb40a81a173bff1e3e63faa04992361f1e"
+    },
+    {
+      "path": "agent_system/memory/__init__.py",
+      "source_sha256": "fab6772d65d336acb45125b63cdb297b18670b3dbb02cf70d8e0c0e1031246c7",
+      "release_sha256": "fab6772d65d336acb45125b63cdb297b18670b3dbb02cf70d8e0c0e1031246c7"
+    },
+    {
+      "path": "agent_system/memory/base.py",
+      "source_sha256": "c5ecbd88cc1d66e28f23035150257dbc0dc11b7bb23a1a6c60d53f685d56c5e8",
+      "release_sha256": "c5ecbd88cc1d66e28f23035150257dbc0dc11b7bb23a1a6c60d53f685d56c5e8"
+    },
+    {
+      "path": "agent_system/memory/memory.py",
+      "source_sha256": "2280632c11fe7d9c062725918fc91493b2e69f6fb00301191dd76ca215041272",
+      "release_sha256": "2280632c11fe7d9c062725918fc91493b2e69f6fb00301191dd76ca215041272"
+    },
+    {
+      "path": "agent_system/multi_turn_rollout/__init__.py",
+      "source_sha256": "24cc244b7b5e4a422d209799bbf8e67e9e6a89df8127a072e1e2c746ea771c44",
+      "release_sha256": "24cc244b7b5e4a422d209799bbf8e67e9e6a89df8127a072e1e2c746ea771c44"
+    },
+    {
+      "path": "agent_system/multi_turn_rollout/rollout_loop.py",
+      "source_sha256": "604eb40282aed146414991beb20b4dc22a33eb8b2adbd13b5721287eaf96ec83",
+      "release_sha256": "604eb40282aed146414991beb20b4dc22a33eb8b2adbd13b5721287eaf96ec83"
+    },
+    {
+      "path": "agent_system/multi_turn_rollout/utils.py",
+      "source_sha256": "60559c21a09ec8da10633c2b07fe36d636b33bc0bf187a946d07c4095c3e55dd",
+      "release_sha256": "60559c21a09ec8da10633c2b07fe36d636b33bc0bf187a946d07c4095c3e55dd"
+    },
+    {
+      "path": "agent_system/reward_manager/__init__.py",
+      "source_sha256": "29aec17a0c3126d2da822b4cc47573999bd8ea2109b750a349773ff0d037028f",
+      "release_sha256": "29aec17a0c3126d2da822b4cc47573999bd8ea2109b750a349773ff0d037028f"
+    },
+    {
+      "path": "agent_system/reward_manager/episode.py",
+      "source_sha256": "d0e99a71ee72d290689dd0db31f186d64a25eaaeb8db838c2db9c761a4883029",
+      "release_sha256": "d0e99a71ee72d290689dd0db31f186d64a25eaaeb8db838c2db9c761a4883029"
+    },
+    {
+      "path": "LICENSE",
+      "source_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "release_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "Notice.txt",
+      "source_sha256": "e55b98f77dc68d4ebed4c6e98168184a2b41e597d5397486e90306ec9dfecbb3",
+      "release_sha256": "e55b98f77dc68d4ebed4c6e98168184a2b41e597d5397486e90306ec9dfecbb3"
+    },
+    {
+      "path": "examples/data_preprocess/drmas_math.py",
+      "source_sha256": "43e14d7d9097b604f3e952f648af569256c23e356d4b1b325d8da37ebca5ab0f",
+      "release_sha256": "c9509063043d615625f111d73e25fe115d1a21e438a93364e3bd6bbb9572c624"
+    },
+    {
+      "path": "tests/trainer/ppo/test_fact_card_pipeline.py",
+      "source_sha256": "0b98aa2f45e56375a341b548f8a70c716cbc37385c82c91450874b2c00c0794b",
+      "release_sha256": "0b98aa2f45e56375a341b548f8a70c716cbc37385c82c91450874b2c00c0794b"
+    },
+    {
+      "path": "tests/trainer/ppo/test_opd_grpo_joint_loss.py",
+      "source_sha256": "af1afcc370815e81740736f5723e0ac6f45b22e543ecbda74a23ddbc8d3c5c44",
+      "release_sha256": "af1afcc370815e81740736f5723e0ac6f45b22e543ecbda74a23ddbc8d3c5c44"
+    },
+    {
+      "path": "tests/trainer/ppo/test_joint_loss_aggregation.py",
+      "source_sha256": "bb9af34c1832b61cc12c2409af925409287067a2624fae27da071e98c2826551",
+      "release_sha256": "bb9af34c1832b61cc12c2409af925409287067a2624fae27da071e98c2826551"
+    },
+    {
+      "path": "tests/trainer/ppo/test_opd_grpo_joint.py",
+      "source_sha256": "6bf3ba7e448c0473d861be8428830c74d8cf2a28d0512bccdf4f1795b727d131",
+      "release_sha256": "6bf3ba7e448c0473d861be8428830c74d8cf2a28d0512bccdf4f1795b727d131"
+    },
+    {
+      "path": "tests/data_preprocess/test_drmas_math.py",
+      "source_sha256": "565738b5a68918712202cd6ab145918573b4ddaab9f4983b23d0a16b5cc26c11",
+      "release_sha256": "565738b5a68918712202cd6ab145918573b4ddaab9f4983b23d0a16b5cc26c11"
+    }
+  ],
+  "release_patches": [
+    {
+      "path": "verl/trainer/config/ppo_trainer.yaml",
+      "reason": "Remove private service and storage defaults; use OPSD_API_KEY."
+    },
+    {
+      "path": "verl/trainer/ppo/opd_fact_cards.py",
+      "reason": "Remove private service and storage defaults; use OPSD_API_KEY."
+    },
+    {
+      "path": "examples/data_preprocess/drmas_math.py",
+      "reason": "Remove private service and storage defaults; use OPSD_API_KEY."
+    },
+    {
+      "path": "verl/trainer/ppo/opd_fact_cards.py",
+      "reason": "Opt-in extraction quota accounting and disable SDK retries bypassing accounting; prompts, ranking, LOO and losses unchanged."
+    },
+    {
+      "path": "verl/trainer/ppo/ray_trainer.py",
+      "reason": "Persist validation token IDs, decoded responses and trajectory outcomes without altering inference or scoring."
+    },
+    {
+      "path": "verl/trainer/ppo/ray_trainer.py",
+      "reason": "Resolve legacy checkpoint directory prefixes by unique agent role; skip training dataloader restore for evaluation-only jobs."
+    }
+  ],
+  "unchanged_source_files": 238,
+  "public_profile": {
+    "power_opd": false,
+    "future_window": 4,
+    "max_loop_num": 3,
+    "actor_micro_per_gpu": [
+      2,
+      2
+    ],
+    "query_batch": 32,
+    "trajectory_repeats": 8,
+    "fresh_training_steps": 550,
+    "historical_resume_step": 20
+  }
+}

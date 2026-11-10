@@ -1,0 +1,15 @@
+name: CPU checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: python -m pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install pytest==8.3.5 numpy pandas pyarrow hydra-core==1.3.2 tensordict==0.6.2 'transformers==4.51.1' 'ray==2.43.0' codetiming dill pylatexenc sympy==1.13.1
+      - run: python -m unittest discover -s tests/release -v
+      - run: python -m pytest tests/trainer/ppo tests/data_preprocess -q
+      - run: python scripts/validate_release.py

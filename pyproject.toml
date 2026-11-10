@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opsd4mas"
+version = "0.1.0"
+description = "Fact-guided on-policy self-distillation for multi-agent language models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["verl*", "agent_system*", "scripts*", "examples*"]
+
+[tool.setuptools.package-data]
+verl = ["version/*", "trainer/config/*.yaml", "models/**/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,32 @@
+{
+  "AMC23": {
+    "rows": 83,
+    "source_file_sha256": "0f933978194b73fc091bd667af7d9056d3d745c9d9e3577b5adcad77f8f1ae7c",
+    "question_answer_sha256": "610f3649a48c4e1ea5698ad175df5e706b9cd8a655aaf1deccef3516b5b2ca78"
+  },
+  "AIME24": {
+    "rows": 30,
+    "source_file_sha256": "dc3ae15e0236828eb95033a68aab60e19da7ea1afdaad80e26924e5f82d3d96f",
+    "question_answer_sha256": "9aa3ce7d9c63cb91451e0e7979c83ae872d0aa9ca0b737a9572d1ce82c679f1d"
+  },
+  "AIME25": {
+    "rows": 30,
+    "source_file_sha256": "14ee9a0e8d79cba76c62247bc5ebee1647e023eccf60e31994e279113777dad2",
+    "question_answer_sha256": "acf4548122ca97493cb6f1c6d9ca4e62aacdae3f127e636f49cd2bf92bbab806"
+  },
+  "MATH-500": {
+    "rows": 500,
+    "source_file_sha256": "2e4c43a3d52175a773816f99f327d3ed5e3d15af6f479d87196a702cdb4f5411",
+    "question_answer_sha256": "05dc313e1fe683fe66e29b1192355d1825aa3a4287b4a9623d59db203ed41974"
+  },
+  "Olympiad-Bench": {
+    "rows": 675,
+    "source_file_sha256": "803e3b4d196bf495b216d7b52ff26c1d607fc1c906618fd833778f798327a39f",
+    "question_answer_sha256": "879dc84fc5a8d215472be30026b1da241a42c8d21e00097aaacf4ba7e1f10c3f"
+  },
+  "Minerva": {
+    "rows": 272,
+    "source_file_sha256": "6a83af0cd9e476ee8832200a57158a23978481daa580584645abc52cf3d4b2ed",
+    "question_answer_sha256": "e1603334d37237c291d4da4be88df80f77fc68d1a7c976be23b3f003579c026b"
+  }
+}

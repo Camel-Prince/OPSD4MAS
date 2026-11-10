@@ -1,0 +1,268 @@
+{
+  "source": "Manuscript Table 1",
+  "units": "percent",
+  "status": "paper-reported; not rerun in this release",
+  "rows": [
+    {
+      "method": "Base Model",
+      "results": {
+        "AMC23": {
+          "pass@1": 60.24,
+          "pass@4": 74.7
+        },
+        "AIME24": {
+          "pass@1": 25.83,
+          "pass@4": 43.33
+        },
+        "AIME25": {
+          "pass@1": 19.17,
+          "pass@4": 23.33
+        },
+        "MATH-500": {
+          "pass@1": 82.4,
+          "pass@4": 90.4
+        },
+        "Olympiad-Bench": {
+          "pass@1": 41.04,
+          "pass@4": 53.04
+        },
+        "Minerva": {
+          "pass@1": 24.72,
+          "pass@4": 31.99
+        }
+      }
+    },
+    {
+      "method": "Solver\u2013Verifier MAS",
+      "results": {
+        "AMC23": {
+          "pass@1": 56.63,
+          "pass@4": 71.08
+        },
+        "AIME24": {
+          "pass@1": 22.5,
+          "pass@4": 36.67
+        },
+        "AIME25": {
+          "pass@1": 16.67,
+          "pass@4": 26.67
+        },
+        "MATH-500": {
+          "pass@1": 83.5,
+          "pass@4": 91.8
+        },
+        "Olympiad-Bench": {
+          "pass@1": 46.81,
+          "pass@4": 59.26
+        },
+        "Minerva": {
+          "pass@1": 33.27,
+          "pass@4": 41.18
+        }
+      }
+    },
+    {
+      "method": "AFlow",
+      "results": {
+        "AMC23": {
+          "pass@1": 61.44,
+          "pass@4": 77.11
+        },
+        "AIME24": {
+          "pass@1": 27.5,
+          "pass@4": 46.67
+        },
+        "AIME25": {
+          "pass@1": 22.5,
+          "pass@4": 26.67
+        },
+        "MATH-500": {
+          "pass@1": 79.15,
+          "pass@4": 88.6
+        },
+        "Olympiad-Bench": {
+          "pass@1": 45.44,
+          "pass@4": 58.07
+        },
+        "Minerva": {
+          "pass@1": 30.61,
+          "pass@4": 39.34
+        }
+      }
+    },
+    {
+      "method": "GPTSwarm",
+      "results": {
+        "AMC23": {
+          "pass@1": 61.44,
+          "pass@4": 74.7
+        },
+        "AIME24": {
+          "pass@1": 20.83,
+          "pass@4": 36.67
+        },
+        "AIME25": {
+          "pass@1": 20.83,
+          "pass@4": 30.0
+        },
+        "MATH-500": {
+          "pass@1": 80.75,
+          "pass@4": 89.6
+        },
+        "Olympiad-Bench": {
+          "pass@1": 44.33,
+          "pass@4": 54.22
+        },
+        "Minerva": {
+          "pass@1": 24.72,
+          "pass@4": 34.19
+        }
+      }
+    },
+    {
+      "method": "DrMAS-GRPO",
+      "results": {
+        "AMC23": {
+          "pass@1": 68.07,
+          "pass@4": 83.13
+        },
+        "AIME24": {
+          "pass@1": 48.33,
+          "pass@4": 63.33
+        },
+        "AIME25": {
+          "pass@1": 32.5,
+          "pass@4": 53.33
+        },
+        "MATH-500": {
+          "pass@1": 90.95,
+          "pass@4": 94.6
+        },
+        "Olympiad-Bench": {
+          "pass@1": 56.11,
+          "pass@4": 68.3
+        },
+        "Minerva": {
+          "pass@1": 36.76,
+          "pass@4": 42.65
+        }
+      }
+    },
+    {
+      "method": "DrMAS-DAPO",
+      "results": {
+        "AMC23": {
+          "pass@1": 78.01,
+          "pass@4": 85.54
+        },
+        "AIME24": {
+          "pass@1": 46.67,
+          "pass@4": 66.67
+        },
+        "AIME25": {
+          "pass@1": 38.33,
+          "pass@4": 53.33
+        },
+        "MATH-500": {
+          "pass@1": 90.35,
+          "pass@4": 94.4
+        },
+        "Olympiad-Bench": {
+          "pass@1": 58.93,
+          "pass@4": 68.0
+        },
+        "Minerva": {
+          "pass@1": 36.86,
+          "pass@4": 43.75
+        }
+      }
+    },
+    {
+      "method": "CoMAS",
+      "results": {
+        "AMC23": {
+          "pass@1": 71.29,
+          "pass@4": 81.93
+        },
+        "AIME24": {
+          "pass@1": 43.33,
+          "pass@4": 60.0
+        },
+        "AIME25": {
+          "pass@1": 36.67,
+          "pass@4": 50.0
+        },
+        "MATH-500": {
+          "pass@1": 90.9,
+          "pass@4": 94.2
+        },
+        "Olympiad-Bench": {
+          "pass@1": 56.59,
+          "pass@4": 68.44
+        },
+        "Minerva": {
+          "pass@1": 36.4,
+          "pass@4": 41.18
+        }
+      }
+    },
+    {
+      "method": "OPSD4MAS (FW2)",
+      "results": {
+        "AMC23": {
+          "pass@1": 74.1,
+          "pass@4": 87.95
+        },
+        "AIME24": {
+          "pass@1": 50.83,
+          "pass@4": 70.0
+        },
+        "AIME25": {
+          "pass@1": 41.67,
+          "pass@4": 73.33
+        },
+        "MATH-500": {
+          "pass@1": 89.0,
+          "pass@4": 95.2
+        },
+        "Olympiad-Bench": {
+          "pass@1": 55.59,
+          "pass@4": 67.11
+        },
+        "Minerva": {
+          "pass@1": 38.42,
+          "pass@4": 47.06
+        }
+      }
+    },
+    {
+      "method": "OPSD4MAS (FW4)",
+      "results": {
+        "AMC23": {
+          "pass@1": 82.23,
+          "pass@4": 91.57
+        },
+        "AIME24": {
+          "pass@1": 62.5,
+          "pass@4": 83.33
+        },
+        "AIME25": {
+          "pass@1": 50.0,
+          "pass@4": 73.33
+        },
+        "MATH-500": {
+          "pass@1": 91.5,
+          "pass@4": 96.6
+        },
+        "Olympiad-Bench": {
+          "pass@1": 60.3,
+          "pass@4": 69.93
+        },
+        "Minerva": {
+          "pass@1": 39.43,
+          "pass@4": 47.79
+        }
+      }
+    }
+  ]
+}
