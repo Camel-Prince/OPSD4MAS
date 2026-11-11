@@ -38,7 +38,26 @@
   ],
   "publication_gaps": [
     "Exact six-benchmark authorized public download locations not established",
-    "Final author/arXiv/public repository metadata not assigned"
+    "Final author/arXiv metadata not assigned"
   ],
-  "test_notes": "Two numerical checks execute unchanged source function bodies with CPU PyTorch in isolation; not a full framework import test. Extra test-dependency download timed out."
+  "test_notes": "Two numerical checks execute unchanged source function bodies with CPU PyTorch in isolation; not a full framework import test. Extra test-dependency download timed out.",
+  "branding_update": {
+    "date": "2026-11-11",
+    "mode": "built-in image_gen",
+    "assets": [
+      "opsd4mas-hero-v1.png",
+      "opsd4mas-icon-v1.png"
+    ],
+    "checks": [
+      "Exact banner spelling visually verified",
+      "Icon alpha range 0..255 verified",
+      "Original Figure 1 panels directly cropped from PDF",
+      "Motivation expanded before Method",
+      "Panels in two equal-width cells",
+      "Paper main table unchanged",
+      "Markdown-to-HTML structure checked"
+    ],
+    "browser_screenshot": "Not available; no browser surface connected during this update"
+  },
+  "publication_repository": "https://code.alipay.com/yufeng.wzx/OPSD4MAS"
 }

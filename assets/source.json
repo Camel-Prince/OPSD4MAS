@@ -4,5 +4,40 @@
   "framework": "Figure 2, page 4",
   "motivation": "Figure 1, page 1",
   "main_results": "Table 1, page 6",
-  "anonymous_pdf_included": false
+  "anonymous_pdf_included": false,
+  "readme_panels": {
+    "motivation-mechanism-v2.png": {
+      "source": "Figure 1(a), page 1",
+      "crop_points": [
+        305,
+        217,
+        527,
+        385
+      ]
+    },
+    "motivation-results-v2.png": {
+      "source": "Figure 1(b), page 1",
+      "crop_points": [
+        305,
+        391,
+        527,
+        520
+      ]
+    }
+  },
+  "branding": {
+    "mode": "built-in image_gen",
+    "prompt_file": "branding-prompts.md",
+    "hero": "opsd4mas-hero-v1.png",
+    "icon": "opsd4mas-icon-v1.png",
+    "purpose": "Promotional brand artwork; no scientific figures or numeric results generated."
+  },
+  "asset_sha256": {
+    "motivation-mechanism-v2.png": "2b5c6630c698dd23c629146e99b324aaa78c724576c6a11961fe2c50cc2e4bf5",
+    "opsd4mas-hero-v1.png": "e6eb9b4cd302ca87924799331b704a7012a3d0699a8623bbfda4b0d8f4333bf3",
+    "motivation.png": "f8d53918a945d6985222bcea9c1e27bef5ef79f6e08c7202875c40ab4717a1a0",
+    "opsd4mas-icon-v1.png": "59665c24062b92be3a42b8164e26761a233a7e108a543d0e36d4da38418c1542",
+    "framework.png": "f0d0ba822d817fc81e8304bbd699f86a6da7504faf18a82f572420bc57db140b",
+    "motivation-results-v2.png": "992a893b2d37c18430e8438c83aae1f8149d8d49bc346c8856fa89e74ac99182"
+  }
 }

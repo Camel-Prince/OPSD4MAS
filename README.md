@@ -1,23 +1,52 @@
 <div align="center">
 
+<img src="assets/opsd4mas-icon-v1.png" alt="OPSD4MAS project icon" width="88">
+
 # OPSD4MAS
 
 ### Turning Multi-Agent Communication into Token-Level Credit<br>with On Policy Self Distillation
-
-**Learn from what agents say next. Improve what each agent learns now.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-2563eb.svg)](LICENSE)
 [![Backbone](https://img.shields.io/badge/Backbone-Qwen3--4B-0f766e.svg)](https://huggingface.co/Qwen/Qwen3-4B)
 [![Training](https://img.shields.io/badge/Training-verl_%2B_SGLang-334155.svg)](#quick-start)
 [![Reference hardware](https://img.shields.io/badge/Reference-4_%C3%97_80GB_GPU-64748b.svg)](#reference-configuration)
 
-[Method](#method) · [Results](#main-results) · [Quick start](#quick-start) · [Evaluation](#evaluate-on-six-benchmarks) · [中文指南](docs/GETTING_STARTED_zh.md)
+[Motivation](#why-communication-derived-token-credit) · [Method](#method) · [Results](#main-results) · [Quick start](#quick-start) · [Evaluation](#evaluate-on-six-benchmarks) · [中文指南](docs/GETTING_STARTED_zh.md)
 
 </div>
+
+<p align="center"><img src="assets/opsd4mas-hero-v1.png" alt="OPSD4MAS promotional banner: turning communication into token-level credit" width="100%"></p>
 
 OPSD4MAS turns future communication in a multi-agent system into **token-level learning signals**. An external model extracts mathematical facts and labels their relations to same-query trajectories. Association ranking and target-specific leave-one-out filtering select useful facts. The current role policy, conditioned on those facts, supplies privileged teacher scores for on-policy self-distillation alongside agent-wise GRPO.
 
 **At inference time, agents use ordinary contexts. Future information and the external extraction model are not required.**
+
+## Why communication-derived token credit?
+
+A scalar reward can say whether a response succeeded, while later communication can identify a specific error, verify a claim, or suggest a repair. OPSD4MAS selects useful facts from that communication and turns them into training signals for the tokens the agents actually generated.
+
+<table>
+<thead>
+<tr>
+<th width="50%">Motivation</th>
+<th width="50%">Intuitive results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="50%" valign="top">
+<img src="assets/motivation-mechanism-v2.png" alt="Paper Figure 1(a): scalar-reward routes compared with communication-derived token-level credit" width="100%">
+<p><strong>From communication to token-level credit.</strong><br>Selected facts condition a privileged view of the same role policy, complementing GRPO's outcome guidance.</p>
+</td>
+<td width="50%" valign="top">
+<img src="assets/motivation-results-v2.png" alt="Paper Figure 1(b): pass@1 and pass@4 on AMC23, AIME24 and AIME25 for GRPO, DAPO, CoMAS, FW2 and FW4" width="100%">
+<p><strong>Stronger results on competition benchmarks.</strong><br>FW4 improves both metrics over the reported scalar-reward baselines on these three datasets. Full six-benchmark numbers appear below.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<sub>Original manuscript Figure 1(a–b), split into two panels without changing the graphics or data. The banner and project icon are promotional artwork; the scientific panels are extracted directly from the paper.</sub>
 
 <table>
 <tr><td align="center"><strong>+8.87 pp</strong><br>Mean pass@1 over GRPO</td><td align="center"><strong>+9.54 pp</strong><br>Mean pass@4 over GRPO</td><td align="center"><strong>6 benchmarks</strong><br>Qwen3-4B role policies</td></tr>
@@ -34,15 +63,6 @@ OPSD4MAS turns future communication in a multi-agent system into **token-level l
 3. **Learn with two complementary signals.** Combine GRPO outcome guidance with fact-conditioned OPSD credit, decreasing the OPSD loss weight linearly during training.
 
 The student and privileged teacher are two context views of the **same role policy**. The external model constructs facts and relations; it does not provide teacher logits. Solver and Verifier have separate trainable policies.
-
-<details>
-<summary><strong>Why communication-derived token credit?</strong></summary>
-
-<p align="center"><a href="assets/motivation.pdf"><img src="assets/motivation.png" alt="Paper Figure 1 compares scalar-reward routes with token-level credit and shows results on three competition datasets" width="65%"></a></p>
-
-Communication can identify a specific error or repair that a scalar task reward does not describe. OPSD4MAS uses selected future information during training to guide the probabilities of tokens the agents actually generated.
-
-</details>
 
 ## Main results
 
@@ -75,7 +95,12 @@ Training code for comparison baselines and the full ablation/injection study are
 
 ## Quick start
 
-Use a Linux x86_64 CUDA machine with **four 80GB GPUs** and sufficient host RAM for offloaded training states. The commands below start from the root of this repository. First obtain the repository through your chosen hosting service; no public repository URL has been assigned yet.
+Use a Linux x86_64 CUDA machine with **four 80GB GPUs** and sufficient host RAM for offloaded training states. The commands below start from the root of this repository. Clone the repository and enter its root before following the steps below:
+
+```bash
+git clone https://code.alipay.com/yufeng.wzx/OPSD4MAS.git
+cd OPSD4MAS
+```
 
 ### 1. Create the environment
 
@@ -213,4 +238,4 @@ docs/            Installation, API, data, evaluation and reproduction notes
 
 This implementation builds on [Dr.MAS](https://github.com/langfengQ/DrMAS), [verl](https://github.com/volcengine/verl), [SGLang](https://github.com/sgl-project/sglang), [FlashAttention](https://github.com/Dao-AILab/flash-attention) and [Qwen3](https://huggingface.co/Qwen/Qwen3-4B). Original copyright notices and the Apache-2.0 [license](LICENSE) are retained. Dataset and model licenses remain with their respective providers.
 
-The manuscript's final author list, arXiv identifier and public repository address will be added when assigned. This candidate does not invent citation metadata or redistribute the anonymous manuscript.
+The manuscript's final author list and arXiv identifier will be added when assigned. This candidate does not invent citation metadata or redistribute the anonymous manuscript.

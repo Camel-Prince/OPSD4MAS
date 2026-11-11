@@ -38,3 +38,7 @@ python -m pytest tests/trainer/ppo tests/data_preprocess -q
 ```
 
 The isolated numerical loader in the lightweight release tests extracts unmodified function bodies so it can check the mathematical operations without importing Ray, Transformers or the whole training stack. These checks complement, rather than replace, the original import-based tests.
+
+## README visual update, 2026-11-11
+
+A new promotional hero and transparent project icon were generated using the built-in image_gen tool. [Exact prompts](../assets/branding-prompts.md) and asset identities are retained. Original manuscript Figure 1(a) and 1(b) were directly extracted into separate panels, placed side by side in an expanded motivation section before the method. The scientific main table is unchanged. Asset appearance, banner spelling, icon alpha, local links and Markdown-to-HTML structure were checked; no connected browser surface was available for a browser screenshot.
