@@ -98,7 +98,7 @@ Training code for comparison baselines and the full ablation/injection study are
 Use a Linux x86_64 CUDA machine with **four 80GB GPUs** and sufficient host RAM for offloaded training states. The commands below start from the root of this repository. Clone the repository and enter its root before following the steps below:
 
 ```bash
-git clone https://code.alipay.com/yufeng.wzx/OPSD4MAS.git
+git clone https://github.com/Camel-Prince/OPSD4MAS.git
 cd OPSD4MAS
 ```
 

@@ -23,7 +23,7 @@ def main():
         if p.suffix=='.py':ast.parse(text,filename=str(rel))
         if p.suffix=='.sh':subprocess.run(['bash','-n',str(p)],check=True)
         # The user-authorized release repository is a public-facing link, not a private API endpoint.
-        scanned=text.replace('https://code.alipay.com/yufeng.wzx/OPSD4MAS','')
+        scanned=text.replace('https://github.com/Camel-Prince/OPSD4MAS','')
         if p.name != 'validate_release.py' and re.search(r'(?:antchat\.alipay|code\.alipay|/ossfs/|/home/admin/|/mnt/aml-heyuan/|/aml/share/|/Users/wangzixu/)',scanned):
             issues.append(f'Private endpoint/path: {rel}')
         if re.search(r'\bsk-[A-Za-z0-9_-]{16,}',text):issues.append(f'Credential-shaped string: {rel}')

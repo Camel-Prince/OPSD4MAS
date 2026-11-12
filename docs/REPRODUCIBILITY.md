@@ -31,6 +31,6 @@ Without an independent validation input, data preparation retains the historical
 - Install the proposed runtime on the target Linux CUDA host; execute the real GPU-kernel check, a minimal FW4 update and a saved-checkpoint evaluation.
 - Establish authorized public download locations for the exact six benchmark snapshots; current fingerprints are available but data files are excluded.
 - Recover checkpoint-to-result mapping and any missing original run metadata before claiming exact main-table reproduction.
-- Add final authors, the arXiv identifier and citation metadata after they are assigned. The release repository is now https://code.alipay.com/yufeng.wzx/OPSD4MAS.
+- Add final authors, the arXiv identifier and citation metadata after they are assigned. The release repository is now https://github.com/Camel-Prince/OPSD4MAS.
 
 No checkpoint or API credential is shipped. Local CPU tests and static checks are recorded in [VALIDATION.md](VALIDATION.md).
