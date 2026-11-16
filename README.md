@@ -6,12 +6,13 @@
 
 ### Turning Multi-Agent Communication into Token-Level Credit<br>with On Policy Self Distillation
 
+[![arXiv](https://img.shields.io/badge/arXiv-2611.16206-b31b1b.svg)](https://arxiv.org/abs/2611.16206)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-2563eb.svg)](LICENSE)
 [![Backbone](https://img.shields.io/badge/Backbone-Qwen3--4B-0f766e.svg)](https://huggingface.co/Qwen/Qwen3-4B)
 [![Training](https://img.shields.io/badge/Training-verl_%2B_SGLang-334155.svg)](#quick-start)
 [![Reference hardware](https://img.shields.io/badge/Reference-4_%C3%97_80GB_GPU-64748b.svg)](#reference-configuration)
 
-[Motivation](#why-communication-derived-token-credit) · [Method](#method) · [Results](#main-results) · [Quick start](#quick-start) · [Evaluation](#evaluate-on-six-benchmarks) · [中文指南](docs/GETTING_STARTED_zh.md)
+[Paper](https://arxiv.org/abs/2611.16206) · [Motivation](#why-communication-derived-token-credit) · [Method](#method) · [Results](#main-results) · [Quick start](#quick-start) · [Evaluation](#evaluate-on-six-benchmarks) · [中文指南](docs/GETTING_STARTED_zh.md)
 
 </div>
 
@@ -238,4 +239,4 @@ docs/            Installation, API, data, evaluation and reproduction notes
 
 This implementation builds on [Dr.MAS](https://github.com/langfengQ/DrMAS), [verl](https://github.com/volcengine/verl), [SGLang](https://github.com/sgl-project/sglang), [FlashAttention](https://github.com/Dao-AILab/flash-attention) and [Qwen3](https://huggingface.co/Qwen/Qwen3-4B). Original copyright notices and the Apache-2.0 [license](LICENSE) are retained. Dataset and model licenses remain with their respective providers.
 
-The manuscript's final author list and arXiv identifier will be added when assigned. This candidate does not invent citation metadata or redistribute the anonymous manuscript.
+The paper is available on arXiv: [Turning Multi-Agent Communication into Token-Level Credit with On Policy Self Distillation](https://arxiv.org/abs/2611.16206).
